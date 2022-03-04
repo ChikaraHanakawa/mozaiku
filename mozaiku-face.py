@@ -14,7 +14,6 @@ def mozaiku(img, alpha):
   h = img.shape[0]
 
   #サイズ加工(最近傍補間について)
-  #https://algorithm.joho.info/image-processing/nearest-neighbor-linear-interpolation/
   img = cv2.resize(img, (int(w*alpha), int(h*alpha)))
   img = cv2.resize(img, (w, h), interpolation=cv2.INTER_NEAREST)
   return img
